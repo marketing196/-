@@ -1,0 +1,240 @@
+<style><!--
+/* * СТИЛИ ДЛЯ СТРАНИЦЫ "ДИЛЕРАМ" НА ОСНОВЕ БРЕНД-БУКА «ЭНЕРГОСКАН» */
+
+    /* Основной контейнер и базовые шрифты */
+    .energoskan-dealers-page {
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: #fff;
+        padding: 20px 10px;
+        font-size: 16px;
+    }
+
+    .energoskan-dealers-page p, .energoskan-dealers-page li {
+        line-height: 1.6;
+    }
+
+    .energoskan-dealers-page p {
+        font-size: 1.1em;
+        text-align: justify;
+    }
+
+    /* Стили для секций и заголовков */
+    .section {
+        margin: 40px 0;
+    }
+
+    .section-title {
+        font-size: 2.2em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        color: #1D95A0;
+    }
+
+    .title-underline {
+        display: inline-block;
+        position: relative;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 3px;
+        transition: background-size 0.4s ease;
+    }
+
+    .section:hover .title-underline {
+        background-size: 100% 3px;
+    }
+
+    /* Список продукции в две колонки */
+    .product-list-twocol {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0;
+        column-count: 2;
+        column-gap: 40px;
+        font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+        .product-list-twocol {
+            column-count: 1;
+        }
+    }
+
+    .product-list-twocol li {
+        padding-left: 25px;
+        position: relative;
+        margin-bottom: 12px;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        list-style: none !important;
+    }
+
+    .product-list-twocol li::before {
+        content: '►';
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        color: #F58220;
+    }
+
+    .product-list-twocol a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+
+    .product-list-twocol a:hover {
+        color: #1D95A0;
+    }
+
+    /* Сетка для преимуществ */
+    .benefits-grid {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .benefits-grid li {
+        background-color: #f7f7f7;
+        border-radius: 0;
+        padding: 25px;
+        padding-left: 55px;
+        position: relative;
+        list-style: none !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow-wrap: break-word; /* Fix for long word wrapping */
+    }
+
+    .benefits-grid li:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .benefits-grid li::before {
+        content: '►';
+        position: absolute;
+        left: 20px;
+        top: 27px;
+        font-size: 1.5em;
+        line-height: 1;
+        color: #F58220;
+    }
+
+    .benefits-grid strong {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #1D95A0;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    @media (min-width: 992px) {
+        .benefits-grid {
+            grid-template-columns: repeat(8, 1fr);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .benefits-grid li:nth-child(1) { grid-column: 1 / 3; }
+        .benefits-grid li:nth-child(2) { grid-column: 3 / 5; }
+        .benefits-grid li:nth-child(3) { grid-column: 5 / 7; }
+        .benefits-grid li:nth-child(4) { grid-column: 7 / 9; }
+        .benefits-grid li:nth-child(5) { grid-column: 2 / 4; }
+        .benefits-grid li:nth-child(6) { grid-column: 4 / 6; }
+        .benefits-grid li:nth-child(7) { grid-column: 6 / 8; }
+    }
+
+    /* Секция "Как стать дилером" */
+    .cta-section {
+        text-align: center;
+        background-color: #f3f3f3;
+        padding: 30px;
+    }
+    .cta-section p {
+        max-width: 800px;
+        margin: 0 auto 20px auto;
+    }
+
+    /* Стили для кнопки */
+    .button-container {
+        text-align: center;
+        margin: 40px 0 20px 0;
+    }
+
+    .register-button {
+        display: inline-block;
+        background-color: #F58220;
+        color: #ffffff;
+        padding: 15px 40px;
+        font-family: Arial, sans-serif;
+        font-size: 1.2em;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    .register-button:hover {
+        background-color: #1D95A0;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        transform: translateY(-2px);
+    }
+--></style>
+<div class="energoskan-dealers-page">
+<p>Компания &laquo;Энергоскан&raquo; приглашает к сотрудничеству компании, занимающиеся продажей электротехнического оборудования, приборов для испытания и дианостики электроэнергетического оборудования и кабельных линий.</p>
+<div class="section">
+<h2 class="section-title"><span class="title-underline">Перечень продукции для дилеров</span></h2>
+<ul class="product-list-twocol">
+<li><a href="https://www.energoskan.ru/catalog/tovar/cablescan-mini/" target="_blank">CableScan mini &ndash; портативный комплект для определения места повреждения кабеля</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/cablescan-40/" target="_blank">CableScan-40 &ndash; мобильная система определения места повреждения кабеля</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/gvi-36m/" target="_blank">ГВИ-36М &ndash; портативный генератор высоковольтных импульсов</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/csl-10/" target="_blank">CSL-10 &ndash; поисковый комплект для точного определения места повреждения кабеля</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/cst-15/">CST- 15 Трассопоисковый комплект</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/pki-2500m/">ПКИ-2500М Поисковый индукционный комплект</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/gzh-2500/">ГЗЧ-2500М генератор звуковой частоты</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/pu-90-m/" target="_blank">ПУ-90М Мобильная прожигающая установка</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/viu-100-m/" target="_blank">ВИУ-100М мобильная высоковольтная испытательная установка</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/idd-40m/" target="_blank">ИДД-40M Присоединительное устройство для импульсно-дугового метода</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/tangens-10r-izmeritel-tangensa-ugla-dielektricheskih-poter-emkosti-i-soprotivleniya-izolyacii/" target="_blank">Тангенс - 10R Измеритель тангенса угла диэлектрических потерь, емкости и сопротивления изоляции</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/tangens-12-izmeritel-tangensa-ugla-dielektricheskih-poter-i-emkosti/" target="_blank">Tангенс - 12 Измеритель тангенса угла диэлектрических потерь и емкости</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/tangens-10ru6-izmeritel-tangensa-ugla-dielektricheskih-poter-emkosti-i-soprotivleniya-izolyacii/" target="_blank">Тангенс - 10RU6 Измеритель тангенса угла диэлектрических потерь, емкости и сопротивления изоляции</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/tangens-12u6-izmeritel-tangensa-ugla-dielektricheskih-poter-i-emkosti/" target="_blank">Тангенс-12U6 Измеритель тангенса угла диэлектрических потерь и емкости</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/poisk-k-16/" target="_blank">ПОИСК К-16 Портативный комплект для определения мест повреждений кабельной линии</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/poisk-k-35/" target="_blank">ПОИСК К - 35 Портативный комплект для определения мест повреждений кабельной линии</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/poisk-gi-16/" target="_blank">ПОИСК ГИ-16 Портативный генератор высоковольтных импульсов</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/poisk-gi-35/" target="_blank">ПОИСК ГИ-35 Портативный генератор высоковольтных импульсов</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/poisk-10/" target="_blank">ПОИСК ПК - 10 Поисковый комплект для точного определения места повреждения</a></li>
+<li><a href="https://www.energoskan.ru/catalog/tovar/poisk-10p/" target="_blank">ПОИСК ПК - 10П Поисковый комплект для точного определения места повреждения</a></li>
+</ul>
+</div>
+<div class="section">
+<h2 class="section-title"><span class="title-underline">Преимущества партнерства</span></h2>
+<ul class="benefits-grid">
+<li><strong>Актуальная линейка продукции</strong>Предлагаем <span class="diff">востребованные</span><span>&nbsp;рынком&nbsp;</span>решения для диагностики кабельных линий и&nbsp;высоковольтных испытаний</li>
+<li><strong>Маркетинговая поддержка</strong> Предоставляем готовые рекламные материалы и организуем совместные презентации и дистанционные семинары</li>
+<li><strong>Техническая поддержка</strong> Консультируем по выбору оборудования и подготовке технического задания</li>
+<li><strong>Обучение персонала партнёра</strong> Проводим презентации и обучение сотрудников в офисе &laquo;Энергоскан&raquo; или в дистанционном формате</li>
+<li><strong>Высокое качество и гарантия</strong> Гарантируем соответствие уровню ведущих европейских производителей и обеспечиваем официальную гарантию и послепродажное обслуживание</li>
+<li><strong>Собственное производство</strong> Опираемся на свою<span>&nbsp;</span>производственную площадку и сервис на Урале, обеспечивая предсказуемые сроки поставки, строгий контроль качества и наличие комплектующих</li>
+<li><strong>Собственные разработки</strong><span>Разрабатываем, производим, адаптируем приборы и установки для поиска повреждений кабельных линий и высоковольтных испытаний электротехнического оборудования</span></li>
+</ul>
+</div>
+<div class="cta-section section">
+<h2 class="section-title"><span class="title-underline">Как стать дилером</span></h2>
+<p><strong>Мы работаем на взаимовыгодных условиях и строим долгосрочные партнёрские отношения.</strong></p>
+<p>Если вы заинтересованы в сотрудничестве, необходимо отправить заявку (в свободной форме) на адрес <a href="mailto:dealer@energoskan.ru">dealer@energoskan.ru</a>, в теме письма укажите &laquo;Заявка на дилерство&raquo;.</p>
+<p>Также вы можете позвонить нам по телефону: +7 (343) 318-01-52 и получить консультацию по участию в дилерской программе.</p>
+<p style="margin-top: 30px;"><a href="https://www.energoskan.ru/file/filemanag/dilerskaya-politika.pdf" target="_blank">Дилерская политика "Энергоскан"</a></p>
+<div class="button-container"><a class="zakazonline own_button1 register-button" href="#">Стать дилером</a></div>
+</div>
+</div>
